@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import ItemList from "./component/ItemList";
 function App() {
+
+ let itemArray= [
+  {
+    Image: `./range.jpg`,
+    name: 'range',
+    price: `99.999 $`,
+  },
+  {
+    Image: `./mercedes.jpg`,
+    name: 'mercedes',
+    price: `76.999 $`,
+  },
+  {
+    Image: `volvo.jpg`,
+    name: 'volvo',
+    price: `89.999 $`,
+  },
+]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1 style={{ color: "rosybrown" }}> Challenge Props</h1>
+     <ItemList products={itemArray}/>
     </div>
   );
 }
